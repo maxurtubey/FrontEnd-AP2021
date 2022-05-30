@@ -1,0 +1,61 @@
+<div class="container">
+    <br>
+    <div class="row mt-10">
+        <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+            <h5>Sumar Experiencia</h5>
+            <br>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa" class="etiquetas">Empresa *</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="empresa_nomb" class="etiquetas">Nombre Completo *</label>
+                    <input type="text" class="form-control" id="empresa_nomb" name="empresa_nomb"
+                        [(ngModel)]="empresa_nomb" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="puesto" class="etiquetas">Puesto *</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="jornada" class="etiquetas">Jornada *</label>
+                    <input type="text" class="form-control" id="jornada" name="jornada" [(ngModel)]="jornada" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="tarea" class="etiquetas">Tarea *</label>
+                    <div class="form-group mb-3">
+                        <textarea type="text" class="form-control" id="tarea" name="tarea" rows="3" [(ngModel)]="tarea"
+                            required></textarea>
+                    </div>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="anio_ingreso" class="etiquetas">Año Ingreso *</label>
+                    <input type="text" class="form-control" id="anio_ingreso" name="anio_ingreso"
+                        [(ngModel)]="anio_ingreso" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="anio_egreso" class="etiquetas">Año Egreso *</label>
+                    <input type="text" class="form-control" id="anio_egreso" name="anio_egreso"
+                        [(ngModel)]="anio_egreso" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="logo" class="etiquetas">Logo URL</label>
+                    <input type="text" placeholder="assets\img\logo_empleo.png" class="form-control" id="logo"
+                        name="logo" [(ngModel)]="logo">
+                    <!-- <input type='text' placeholder="assets\img\logo_estudios.png" value='assets\img\logo_estudios.png' class="form-control"/> -->
+                </div>
+                <!-- <br> -->
+                <br>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Añadir</button>
+            </form>
+        </div>
+    </div>
+</div>

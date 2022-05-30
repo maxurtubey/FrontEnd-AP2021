@@ -1,0 +1,45 @@
+
+<div class="container">
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Sumar Proyecto</h5>
+      <br>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="titulo" class="etiquetas">Título *</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="year" class="etiquetas">Año *</label>
+          <input type="text" class="form-control" id="year" name="year" [(ngModel)]="year" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="descripcion" class="etiquetas">Descripción *</label>
+          <textarea class="form-control" id="descripcion" rows="5" name="descripcion" [(ngModel)]="descripcion" required></textarea>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="tecnologias" class="etiquetas">URL IMG tecnologías *</label>
+          <input type="text" class="form-control" id="tecnologias" name="tecnologias" [(ngModel)]="tecnologias" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="logo" class="etiquetas">Logo URL *</label>
+          <input type="text" placeholder="assets\img\logo_empleo.png" class="form-control" id="logo" name="logo"
+            [(ngModel)]="logo" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="tecnologias" class="etiquetas">GitHub link</label>
+          <input type="text" class="form-control" id="link" name="link" [(ngModel)]="link">
+        </div>
+        <!-- <br> -->
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Añadir</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<!-- Quinta Tarjeta / Habilidades -->
+
+<div class="container-md">
+  <div class="card bg-secondary" style="padding: 20px">
+    <div class="row">
+      <div class="col-8 col-sm-6">
+        <h3 class="bco" style="margin-left: 50px;">Habilidades:</h3>
+      </div>
+      <div class="col"></div>
+      <div *ngIf="(isLoggedIn | async)" class="col-1">
+        <a routerLink="/agregarHabilidad" class="flex2 vertical-center"><i class="fa fa-plus fa-lg"></i></a>
+      </div>
+      <hr class="whitehorlines">
+      <ul>
+        <li *ngFor="let item of habilidadesArr" class="col-lg-4 col-md-6 col-sm-6 col-12 marco"> <!-- style="border: 1px solid yellow;"> -->
+        <circle-progress
+        [percent]="convertir(item.porcentaje)"
+        [radius]="80"
+        [outerStrokeWidth]="8"
+        [innerStrokeWidth]="2"
+        [outerStrokeColor]="'#ffffff'"
+        [innerStrokeColor]="'#999999'"
+        [animation]="true"
+        [animationDuration]="500"
+        [clockwise]="true"
+        [outerStrokeLinecap]="'inherit'"
+        [showTitle]="false"
+        [showSubtitle]="false"
+        [showUnits]="false"
+        [imageSrc]="item.logo"
+        [imageHeight]="100"
+        [imageWidth]="100"
+        [showImage]="true">
+        </circle-progress>
+        <div class="description">
+          <a target="_blank" href="{{item.certificado}}">{{item.descripcion}}</a>
+          <p>{{item.duracion}} {{item.porcentaje}}%</p>
+        </div>
+        <div *ngIf="(isLoggedIn | async)">
+          <a [routerLink]="['../editarHab/' + item.id]"><i class="far fa-edit fa-lg m-2"></i></a>
+          <a (click)="borrar(item.id)"><i class="far fa-trash-alt fa-lg m-2"></i></a>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

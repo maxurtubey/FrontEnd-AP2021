@@ -1,0 +1,50 @@
+
+<div class="container">
+    <br>
+    <br>
+    <div class="row mt-10">
+        <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+            <h5>Sumar Educación</h5>
+            <br>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="centro" class="etiquetas">Centro *</label>
+                    <input type="text" class="form-control" id="centro" name="centro"
+                    [(ngModel)]="centro" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="centro_nomb" class="etiquetas">Nombre Completo *</label>
+                    <input type="text" class="form-control" id="centro_nombre" name="centro_nombre"
+                    [(ngModel)]="centro_nombre" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="titulo" class="etiquetas">Titulo *</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo"
+                    [(ngModel)]="titulo" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="anio_ingreso" class="etiquetas">Año Ingreso *</label>
+                    <input type="text" class="form-control" id="anio_ingreso" name="anio_ingreso"
+                    [(ngModel)]="anio_ingreso" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="anio_egreso" class="etiquetas">Año Egreso *</label>
+                    <input type="text" class="form-control" id="anio_egreso" name="anio_egreso"
+                    [(ngModel)]="anio_egreso" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="logo" class="etiquetas">Logo URL</label>
+                    <input type="text" placeholder="assets\img\logo_estudios.png" class="form-control" id="logo" name="logo" [(ngModel)]="logo">
+                </div>
+                <!-- <br> -->
+                <br>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Añadir</button>
+            </form>
+        </div>
+    </div>
+</div>

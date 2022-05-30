@@ -1,0 +1,22 @@
+<!-- <h5> Editar Experiencia</h5> -->
+<div class="container">
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Editar 'Acerca de:'</h5>
+      <br>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="texto" class="etiquetas">Párrafo *</label>
+          <div class="form group mb-3">
+            <ng-container *ngIf="acercaDeSelect">
+              <textarea class="form-control" id="parrafo" rows="4" name="parrafo" [(ngModel)]="acercaDeSelect.texto" required></textarea>
+            </ng-container>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>

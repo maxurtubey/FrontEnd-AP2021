@@ -1,0 +1,38 @@
+<!-- Navbar / login -->
+
+<div class="container-md">
+  <div class="card bg-secondary">
+    <nav class="navbar navbar-light navbar-expand-sm bg-secondary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/img/APLogo-20-20.png" alt="logo Argentina Programa"
+            style="height: 45px; margin-left: 15px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" style="padding-right: 20px;">
+            <li class="nav-item updowndist">
+              <a href="https://www.linkedin.com/in/maximiliano-urtubey/" target="_blank">
+                <img src="assets/img/LinkeIn_logo.png" class="img_link" alt="logo LinkedIn" style="height: 30px">
+              </a>
+            </li>
+            <li class="nav-item updowndist">
+              <a href="https://github.com/maxurtubey" target="_blank">
+                <img src="assets/img/GitHub_logo.png" class="img_link" alt="logo GitHub" style="height: 30px">
+              </a>
+            </li>
+            <li class="nav-item">
+              <button *ngIf="!(isLoggedIn | async)" type="button" [routerLink]="['iniciarSesion']"
+                class="btn btn-light btn-outline-success btn-sm updowndist">Acceder</button>
+            </li>
+            <li>
+              <button *ngIf="(isLoggedIn | async)" type="button" (click)="autenticacionService.cerrarSesion()"
+                class="btn btn-light btn-outline-danger btn-sm updowndist">- Salir -</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+a,
+a label {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inline-div {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.accordion-button.collapsed {
+    background: rgba(255, 255, 255, 0.2)
+}
+
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn_inner-blanco {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    text-align: center !important;
+    font-weight: 400;
+    color: lightgray;
+}
+
+.btn_inner-blanco:hover {
+    color: white;
+    font-weight: 600;
+}
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 1.0);
+}

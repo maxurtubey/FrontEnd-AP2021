@@ -1,0 +1,133 @@
+<!-- <h5> Editar Educación</h5> -->
+
+<!-- Como NG modal -->
+
+<!-- <ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Editar Educación</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="centro" class="etiquetas">Centro *</label>
+        <input type="text" class="form-control" id="centro" name="centro" [(ngModel)]="estudioSelect.centro" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="centro_nomb" class="etiquetas">Nombre Completo *</label>
+        <input type="text" class="form-control" id="centro_nombre" name="centro_nombre"
+          [(ngModel)]="estudioSelect.centro_nombre" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="titulo" class="etiquetas">Titulo *</label>
+        <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="estudioSelect.titulo" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="anio_ingreso" class="etiquetas">año Ingreso *</label>
+        <input type="text" class="form-control" id="anio_ingreso" name="anio_ingreso"
+          [(ngModel)]="estudioSelect.anio_ingreso" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="anio_egreso" class="etiquetas">año Egreso *</label>
+        <input type="text" class="form-control" id="anio_egreso" name="anio_egreso"
+          [(ngModel)]="estudioSelect.anio_egreso" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="logo" class="etiquetas">Logo URL</label>
+        <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="estudioSelect.logo">
+      </div>
+      <br>
+      <hr>
+      <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{ closeResult }}</pre> -->
+
+<!-- ----------------------- -->
+
+<!-- Como página html -->
+
+<div class="container" *ngIf="estudioSelect">
+  <br>
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+        <h5>Editar Educación</h5>
+        <br>
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group">
+              <label for="centro" class="etiquetas">Centro *</label>
+              <input type="text" class="form-control" id="centro" name="centro" [(ngModel)]="estudioSelect.centro"
+                required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="centro_nomb" class="etiquetas">Nombre Completo *</label>
+              <input type="text" class="form-control" id="centro_nombre" name="centro_nombre"
+                [(ngModel)]="estudioSelect.centro_nombre" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="titulo" class="etiquetas">Titulo *</label>
+              <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="estudioSelect.titulo"
+                required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="anio_ingreso" class="etiquetas">año Ingreso *</label>
+              <input type="text" class="form-control" id="anio_ingreso" name="anio_ingreso"
+                [(ngModel)]="estudioSelect.anio_ingreso" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="anio_egreso" class="etiquetas">año Egreso *</label>
+              <input type="text" class="form-control" id="anio_egreso" name="anio_egreso"
+                [(ngModel)]="estudioSelect.anio_egreso" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="logo" class="etiquetas">Logo URL</label>
+              <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="estudioSelect.logo">
+            </div>
+            <br>
+            <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<!-- <ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+            #dp="ngbDatepicker">
+          <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template> -->

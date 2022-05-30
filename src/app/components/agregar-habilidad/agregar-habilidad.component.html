@@ -1,0 +1,40 @@
+<div class="container">
+    <br>
+    <div class="row mt-10">
+        <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+            <h5>Sumar Habilidad</h5>
+            <br>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="descripcion" class="etiquetas">Descripción *</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="porcentaje" class="etiquetas">Porcentaje *</label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje"
+                        [(ngModel)]="porcentaje" required>
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="certificado" class="etiquetas">Certificado</label>
+                    <input type="text" class="form-control" id="certificado" name="certificado" [(ngModel)]="certificado">
+                </div>
+                <!-- <br> -->
+                <div class="form-group">
+                    <label for="duracion" class="etiquetas">Duración</label>
+                    <input type="text" class="form-control" id="duracion" name="duracion" [(ngModel)]="duracion">
+                </div>
+                <!-- <br> -->
+                    <div class="form-group">
+                    <label for="logo" class="etiquetas">Logo URL *</label>
+                    <input type="text" placeholder="assets\img\logo_empleo.png" class="form-control" id="logo"
+                        name="logo" [(ngModel)]="logo" required>
+                </div>
+                <!-- <br> -->
+                <br>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Añadir</button>
+            </form>
+        </div>
+    </div>
+</div>

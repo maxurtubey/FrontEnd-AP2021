@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+    border-radius: 5px;
+  }
+  
+  .card {
+    margin: 10px;
+    /* border-radius: 10px; */
+  }
+  
+  .profile_img {
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
+    margin-left: 10px;
+  }
+  
+  .profile-edit {
+    color: white;
+    margin-top: 35px;
+  }
+  
+  .fa-edit, .fa-plus, .fa-trash-alt {
+    color: white;
+  }
+
+  .flex2 {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: green; */
+  }
+
+  .whitehorlines {
+    color: white;
+  }
+  
+  .card_title {
+    font-size: 20px;
+  }
+  
+  .form {
+    font-size: 12px;
+  }
+  
+  .bco {
+    color: white;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .data-container {
+    display: flex;
+  }
+  
+  .info_contacto {
+    margin-left: 20px;
+    color: aqua;
+  }
+  
+  /* .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  } */

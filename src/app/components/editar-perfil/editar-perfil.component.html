@@ -1,0 +1,35 @@
+<div class="container" *ngIf="perfilSelect">
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Editar Perfil</h5>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="imgfondo" class="etiquetas">URL de imagen de fondo *</label>
+          <input type="text" class="form-control" id="imgfondo" name="imgfondo" [(ngModel)]="perfilSelect.imgfondo"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="imgperfil" class="etiquetas">URL de imagen de perfil *</label>
+          <input type="text" class="form-control" id="imgperfil" name="imgperfil" [(ngModel)]="perfilSelect.imgperfil"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="nombre" class="etiquetas">Nombre/s y Apellido*</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="perfilSelect.nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="ciudad" class="etiquetas">Ciudad *</label>
+          <input type="text" class="form-control" id="ciudad" name="ciudad" [(ngModel)]="perfilSelect.ciudad" required>
+        </div>
+        <div class="form-group">
+          <label for="provincia" class="etiquetas">Provincia (País) *</label>
+          <input type="text" class="form-control" id="provincia" name="provincia" [(ngModel)]="perfilSelect.provincia"
+            required>
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>

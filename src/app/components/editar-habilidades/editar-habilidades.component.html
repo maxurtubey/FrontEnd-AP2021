@@ -1,0 +1,44 @@
+<!-- <h5> Editar Habilidades</h5> -->
+
+<div class="container" *ngIf="habilidadesSelect">
+  <br>
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Editar Habilidades</h5>
+      <br>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="descripcion" class="etiquetas">Descripción *</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion"
+            [(ngModel)]="habilidadesSelect.descripcion" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="porcentaje" class="etiquetas">Porcentaje (0-100)*</label>
+          <input type="text" class="form-control" id="porcentaje" name="porcentaje"
+            [(ngModel)]="habilidadesSelect.porcentaje" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="duracion" class="etiquetas">Duración (horas)</label>
+          <input type="text" class="form-control" id="duracion" name="duracion"
+            [(ngModel)]="habilidadesSelect.duracion">
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="certificado" class="etiquetas">Certificado</label>
+          <input type="text" class="form-control" id="certificado" name="certificado"
+            [(ngModel)]="habilidadesSelect.certificado">
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="logo" class="etiquetas">Logo URL</label>
+          <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="habilidadesSelect.logo">
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>

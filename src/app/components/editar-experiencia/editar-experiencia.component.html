@@ -1,0 +1,62 @@
+<!-- <h5> Editar Experiencia</h5> -->
+
+<div class="container" *ngIf="experienciaSelect">
+  <br>
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Editar Experiencia</h5>
+      <br>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="centro" class="etiquetas">Empresa *</label>
+          <input type="text" class="form-control" id="centro" name="centro" [(ngModel)]="experienciaSelect.empresa"
+            required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="empresa_nomb" class="etiquetas">Empresa Nombre *</label>
+          <input type="text" class="form-control" id="empresa_nomb" name="empresa_nomb"
+            [(ngModel)]="experienciaSelect.empresa_nomb" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="centro_nomb" class="etiquetas">Puesto *</label>
+          <input type="text" class="form-control" id="centro_nombre" name="centro_nombre"
+            [(ngModel)]="experienciaSelect.puesto" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="jornada" class="etiquetas">Jornada *</label>
+          <input type="text" class="form-control" id="jornada" name="jornada" [(ngModel)]="experienciaSelect.jornada"
+            required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group mb-3">
+          <label for="tarea" class="etiquetas">Tarea/s</label>
+          <textarea type="text" class="form-control" id="tarea" name="tarea" rows="3"
+            [(ngModel)]="experienciaSelect.tarea" required></textarea>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="anio_ingreso" class="etiquetas">año Ingreso *</label>
+          <input type="text" class="form-control" id="anio_ingreso" name="anio_ingreso"
+            [(ngModel)]="experienciaSelect.anio_ingreso" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="anio_egreso" class="etiquetas">año Egreso *</label>
+          <input type="text" class="form-control" id="anio_egreso" name="anio_egreso"
+            [(ngModel)]="experienciaSelect.anio_egreso" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="logo" class="etiquetas">Logo URL</label>
+          <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="experienciaSelect.logo">
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>

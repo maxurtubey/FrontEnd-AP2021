@@ -1,0 +1,30 @@
+<!-- Segunda Tarjeta / Acerca de -->
+
+<div class="container-md">
+  <div class="card bg-secondary" style="padding: 20px">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <h3 class="bco" style="margin-left: 50px;">Acerca de:</h3>
+      </div>
+      <div class="col"></div>
+    </div>
+    <ul id="info_details">
+      <div class="row">
+        <li *ngFor="let item of acercaDeArr">
+          <hr class="whitehorlines">
+          <!-- <div class="col-12 row no-gutters no-padding"> -->
+            <div class="row"> <!-- style="border: 2px solid yellow;"> -->
+              <div class="col-md-11 col-sm-11 col-10"> <!-- style="border: 2px solid lightgreen;"> -->
+                <h6 class="bco">{{item.texto}}</h6>
+              </div>
+              <div *ngIf="(isLoggedIn | async)" class="col-md-1 col-sm-1 col-2"> <!-- style="border: 2px solid red;"> -->
+                <!-- Botón de Edición -->
+                <a [routerLink]="['../editarAcerca/' + item.id]"><i class="far fa-edit fa-lg m-2"></i></a>
+              </div>
+            </div>
+          <!-- </div> -->
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

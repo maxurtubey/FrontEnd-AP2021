@@ -1,0 +1,50 @@
+<!-- <h5> Editar Proyectos</h5> -->
+
+<div class="container" *ngIf="proyectoSelect">
+  <br>
+  <br>
+  <div class="row mt-10">
+    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+      <h5>Editar Proyecto</h5>
+      <br>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="titulo" class="etiquetas">Título *</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="proyectoSelect.titulo"
+            required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="year" class="etiquetas">Año *</label>
+          <input type="text" class="form-control" id="year" name="year" [(ngModel)]="proyectoSelect.year" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="descripcion" class="etiquetas">Descripcion *</label>
+          <!-- <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="proyectoSelect.descripcion" required> -->
+          <textarea class="form-control" id="parrafo" rows="5" name="parrafo" [(ngModel)]="proyectoSelect.descripcion"
+            required></textarea>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="tecnologias" class="etiquetas">URL IMG Tecnologías *</label>
+          <input type="text" class="form-control" id="tecnologias" name="tecnologias"
+            [(ngModel)]="proyectoSelect.tecnologias" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="logo" class="etiquetas">Logo URL *</label>
+          <input type="text" class="form-control" id="logo" name="logo" [(ngModel)]="proyectoSelect.logo" required>
+        </div>
+        <!-- <br> -->
+        <div class="form-group">
+          <label for="link" class="etiquetas">GitHub link</label>
+          <input type="text" class="form-control" id="link" name="link" [(ngModel)]="proyectoSelect.link">
+        </div>
+        <br>
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
