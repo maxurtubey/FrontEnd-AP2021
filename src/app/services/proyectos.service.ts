@@ -11,8 +11,10 @@ export class ProyectosService {
 
   constructor(private http: HttpClient) { }
 
-  proyectosURL = "https://portfolio-ap2021.herokuapp.com/proyectos/"
-  // proyectosURL = "http://localhost:8080/proyectos/"
+  // proyectosURL = "https://portfolio-ap2021.herokuapp.com/proyectos/"
+  // proyectosURL = "https://portfolio-api-rest.onrender.com/proyectos/"
+  // proyectosURL = "https://api-rest-urtubey.koyeb.app/proyectos/"
+  proyectosURL = "http://localhost:8080/proyectos/"
 
   public detalle(id: number): Observable<ProyectosModelo>{
     return this.http.get<ProyectosModelo>(this.proyectosURL + `detalle/${id}`);

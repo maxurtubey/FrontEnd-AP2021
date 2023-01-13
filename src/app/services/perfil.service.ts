@@ -11,8 +11,10 @@ export class PerfilService {
 
   constructor(private http: HttpClient) { }
 
-  perfilURL = "https://portfolio-ap2021.herokuapp.com/perfil/"
-  // perfilURL = "http://localhost:8080/perfil/"
+  // perfilURL = "https://portfolio-ap2021.herokuapp.com/perfil/"
+  // perfilURL = "https://portfolio-api-rest.onrender.com/perfil/"
+  // perfilURL = "https://api-rest-urtubey.koyeb.app/perfil/"
+  perfilURL = "http://localhost:8080/perfil/"
 
   public detalle(id: number): Observable<PerfilModelo> {
     return this.http.get<PerfilModelo>(this.perfilURL + `detalle/${id}`);

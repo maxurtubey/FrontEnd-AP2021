@@ -1,11 +1,11 @@
 <!-- Navbar / login -->
 
 <div class="container-md">
-  <div class="card bg-secondary">
-    <nav class="navbar navbar-light navbar-expand-sm bg-secondary">
+  <div class="card bg-dark bg-opacity-75">
+    <nav class="navbar navbar-light navbar-expand-sm bg-transparent">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="assets/img/APLogo-20-20.png" alt="logo Argentina Programa"
-            style="height: 45px; margin-left: 15px"></a>
+            style="height: 45px; margin-left: 50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,13 +22,13 @@
                 <img src="assets/img/GitHub_logo.png" class="img_link" alt="logo GitHub" style="height: 30px">
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <button *ngIf="!(isLoggedIn | async)" type="button" [routerLink]="['iniciarSesion']"
                 class="btn btn-light btn-outline-success btn-sm updowndist">Acceder</button>
-            </li>
+            </li> -->
             <li>
               <button *ngIf="(isLoggedIn | async)" type="button" (click)="autenticacionService.cerrarSesion()"
-                class="btn btn-light btn-outline-danger btn-sm updowndist">- Salir -</button>
+                class="btn btn-light btn-outline-danger btn-sm updowndist"> X </button>
             </li>
           </ul>
         </div>

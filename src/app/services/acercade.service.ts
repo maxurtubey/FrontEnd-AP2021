@@ -10,8 +10,10 @@ import { Observable } from 'rxjs';
 export class AcercadeService {
 
   constructor(private http: HttpClient) { }
-  acercadeURL = "https://portfolio-ap2021.herokuapp.com/acercade/"
-  // acercadeURL = "http://localhost:8080/acercade/"
+  // acercadeURL = "https://portfolio-ap2021.herokuapp.com/acercade/"
+  // acercadeURL = "https://portfolio-api-rest.onrender.com/acercade/"
+  // acercadeURL = "https://api-rest-urtubey.koyeb.app/acercade/"
+  acercadeURL = "http://localhost:8080/acercade/"
   
   public detalle(id: number): Observable<AcercaDeModelo>{
     return this.http.get<AcercaDeModelo>(this.acercadeURL + `detalle/${id}`);

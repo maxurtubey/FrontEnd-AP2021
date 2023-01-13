@@ -11,8 +11,10 @@ export class EducacionService {
 
   constructor(private http: HttpClient) { }
 
-  estudiosURL = "https://portfolio-ap2021.herokuapp.com/estudios/"
-  // estudiosURL = "http://localhost:8080/estudios/"
+  // estudiosURL = "https://portfolio-ap2021.herokuapp.com/estudios/"
+  // estudiosURL = "https://portfolio-api-rest.onrender.com/estudios/"
+  // estudiosURL = "https://api-rest-urtubey.koyeb.app/estudios/"
+  estudiosURL = "http://localhost:8080/estudios/"
 
   public detalle(id: number): Observable<EstudioModelo>{
     return this.http.get<EstudioModelo>(this.estudiosURL + `detalle/${id}`);

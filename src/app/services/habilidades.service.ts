@@ -11,8 +11,10 @@ export class HabilidadesService {
 
   constructor(private http: HttpClient) { }
 
-  habilidadesURL = "https://portfolio-ap2021.herokuapp.com/habilidades/"
-  // habilidadesURL = "http://localhost:8080/habilidades/"
+  // habilidadesURL = "https://portfolio-ap2021.herokuapp.com/habilidades/"
+  // habilidadesURL = "https://portfolio-api-rest.onrender.com/habilidades/"
+  // habilidadesURL = "https://api-rest-urtubey.koyeb.app/habilidades/"
+  habilidadesURL = "http://localhost:8080/habilidades/"
 
   public detalle(id: number): Observable<HabilidadesModelo>{
     return this.http.get<HabilidadesModelo>(this.habilidadesURL + `detalle/${id}`);

@@ -1,26 +1,25 @@
-<div class="container">
+<div class="container vertical-center">
   <div class="row mt-10">
-    <div class="col-md-6 mx-auto border border-secondary shadow p-3 mb-5 bg-body rounded">
+    <div class="card bg-dark bg-opacity-75 shadow p-3 rounded">
       <form [formGroup]="formulario" class="m-5" (ngSubmit)="onEnviar($event)">
         <div class="mb-3">
-          <h4>Iniciar Sesion</h4>
-          <label for="exampleInputEmail1" class="form-label">Usuario</label>
-          <input type="text" formControlName="username" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp" [ngClass]="{'is-invalid': Usuario?.errors && Usuario?.touched, 'is-valid': !Usuario?.errors && Usuario?.touched}"/>
+          <h4 class="bco">Iniciar Sesion</h4>
+          <label for="exampleInputEmail1" class="bco form-label">Usuario</label>
+          <input type="text" formControlName="username" class="form-control transparent-input" id="exampleInputEmail1" style="color: white" [ngClass]="{'is-invalid': Usuario?.errors && Usuario?.touched, 'is-valid': !Usuario?.errors && Usuario?.touched}"/>
           <div *ngIf="Usuario?.errors && Usuario?.touched">
             <p *ngIf="Usuario?.hasError('required')" class="error">El nombre es requerido.</p>
             <p *ngIf="Usuario?.errors?.['minlength'] || Usuario?.errors?.['maxlength']" class="error">El usuario debe tener entre 3 y 15 caracteres.</p>
           </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" [ngClass]="{'is-invalid': Clave?.errors && Clave?.touched, 'is-valid': !Clave?.errors && Clave?.touched}">
+          <label for="exampleInputPassword1" class="bco form-label">Contraseña</label>
+          <input type="password" formControlName="password" class="form-control transparent-input" id="exampleInputPassword1" style="color: white" [ngClass]="{'is-invalid': Clave?.errors && Clave?.touched, 'is-valid': !Clave?.errors && Clave?.touched}">
           <div *ngIf="Clave?.errors && Clave?.touched">
             <p *ngIf="Clave?.hasError('required')" class="error">La contraseña es requerido.</p>
             <p *ngIf="Clave?.errors?.['minlength']" class="error">La contraseña debe tener 8 o más caracteres.</p>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-outline-success">Enviar</button>
       </form>
     </div>
   </div>

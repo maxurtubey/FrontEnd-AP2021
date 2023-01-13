@@ -1,19 +1,20 @@
 <!-- Primera Tarjeta / Perfil -->
 
 <div class="container-md">
-  <div class="card bg-secondary">
+  <div class="card bg-dark bg-opacity-75">
     <div *ngFor="let item of perfilArr">
       <img [src]="item.imgfondo" class="card-img-top" alt="..." />
       <div class="container" style="margin-left: 1em">
-        <div class="card-body" id="info_img">
+        <div class="card-body " id="info_img" style="margin-left: 30px">
           <div class="d-flex">
-            <img class="profile_img rounded-circle border border-5 border-secondary" [src]="item.imgperfil"
-              alt="imagen del perfil" />
+            <!-- <img class="profile_img rounded-circle border border-5 border-secondary" [src]="item.imgperfil"
+              alt="imagen del perfil" /> -->
             <div *ngIf="(isLoggedIn | async)" class="btn-edit"><a [routerLink]="['../editarPerf/' + item.id]"
                 class="btn-right"><i class="far fa-edit fa-lg profile-edit"></i></a></div>
           </div>
           <div id="info_data" class="">
             <h2 class="card-title bco">{{item.nombre}}</h2>
+            <h5 class="card-title bco">Desarrollador Web - Front End</h5>
             <div id="info_contact" class="data-container">
               <p class="bco">{{item.ciudad}}&nbsp;-&nbsp;{{item.provincia}}</p>
               <p><a class="info_contacto" href="urtubey@gmail.com">contacto</a></p>

@@ -11,8 +11,10 @@ export class ExperienciaService {
 
   constructor(private http: HttpClient) { }
 
-  experienciaURL = "https://portfolio-ap2021.herokuapp.com/experiencia/"
-  // experienciaURL = "http://localhost:8080/experiencia/"
+  // experienciaURL = "https://portfolio-ap2021.herokuapp.com/experiencia/"
+  // experienciaURL = "https://portfolio-api-rest.onrender.com/experiencia/"
+  // experienciaURL = "https://api-rest-urtubey.koyeb.app/experiencia/"
+  experienciaURL = "http://localhost:8080/experiencia/"
 
   public detalle(id: number): Observable<ExperienciaModelo>{
     return this.http.get<ExperienciaModelo>(this.experienciaURL + `detalle/${id}`);

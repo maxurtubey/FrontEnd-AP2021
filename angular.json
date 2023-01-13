@@ -106,5 +106,8 @@
       }
     }
   },
-  "defaultProject": "portfolio_AP2021"
+  "defaultProject": "portfolio_AP2021",
+  "cli": {
+    "analytics": false
+  }
 }

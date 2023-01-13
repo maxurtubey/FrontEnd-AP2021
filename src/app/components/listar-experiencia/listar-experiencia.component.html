@@ -1,10 +1,10 @@
 <!-- Cuarta Tarjeta / Experiencia -->
 
 <div class="container-md">
-  <div class="card bg-secondary" style="padding: 20px">
+  <div class="card bg-dark bg-opacity-75" style="padding: 20px">
     <div class="row">
       <div class="col-8 col-sm-6">
-        <h3 class="bco" style="margin-left: 50px;">Experiencia Laboral:</h3>
+        <h4 class="bco" style="margin-left: 50px;">Experiencia Laboral:</h4>
       </div>
       <div class="col"></div>
       <div *ngIf="(isLoggedIn | async)" class="col-1">
@@ -13,7 +13,7 @@
     </div>
     <hr class="whitehorlines">
     <div class="accordion" id="accordionContainer">
-      <div class="accordion-item bg-secondary" *ngFor="let item of experienciaArr; let i = index">
+      <div class="accordion-item bg-transparent" *ngFor="let item of experienciaArr; let i = index">
         <h2 class="accordion-header" [id]="'heading' + i">
           <button class="accordion-button btn_inner-blanco" type="button" data-bs-toggle="collapse"
             [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">

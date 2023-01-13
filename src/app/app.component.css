@@ -1,0 +1,7 @@
+
+.bgimg {
+    background-image: url("../assets/img/windows_and_cofee.jpg");
+    background-attachment:fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
